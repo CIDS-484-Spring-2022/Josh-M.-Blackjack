@@ -7,6 +7,7 @@ Overview
  =============================================================
  Singleplayer game of Blackjack. Player will be able to Hit, Stand, Double, or Split. Tracks cash value until you lose all your money the game ends. Game Creates randomized decks each time you start it. Game adds used cards from previous hand to end of stack for continuous gameplay(Assuming you dont lose all you money first).
 
+VIDEO LINK - https://www.youtube.com/watch?v=sErKhXEZ0P4&ab_channel=JoshMecl
 Future plans
 ================
 GUI.
