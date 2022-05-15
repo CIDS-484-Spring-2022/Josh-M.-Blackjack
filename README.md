@@ -9,12 +9,12 @@ Overview
 
 Future plans
 ================
-GUI
-Multiple decks/ game
-Saving progress
-Multiple Hands besides splitting
-Tutorial/ walk through
-SideBets ( so you can really throw your fake money away)
+GUI.
+Multiple decks/ game.
+Saving progress.
+Multiple Hands besides splitting.
+Tutorial/ walk through.
+SideBets ( so you can really throw your fake money away).
 
 Outline
 ---------
@@ -34,9 +34,9 @@ I use the deck class to make hands for the player and dealer.
 Stores a deck/ creates it in an array. createFullDeck() generates deck in order. 
 Shuffle() randomizes the deck.
 draw() adds card to a deck from a existing deck and removes it from the deck it took from.
-moveAlltoDeck() used for restoring the deck playing cards for continuous play
+moveAlltoDeck() used for restoring the deck playing cards for continuous play.
 cardsValue() returns the value of the cards in each deck/hand. 
-toString() format printing
+toString() format printing.
 
 Value class
 ----------
