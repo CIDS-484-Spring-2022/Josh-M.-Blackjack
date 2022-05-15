@@ -5,48 +5,43 @@ Blackjack 1.0
 
 Overview
  =============================================================
- Singleplayer blackjack game. Player will be able to split, double, stand, and hit in a classic game of blackjack. Player will be able to raise/lower and place an initial bet. The game will keep track of current money and will go negative to display how much money you can lose while gambling and how quickly. The game will offer a tutorial to offer new players help or to teach new players the game. Game will be made in Java. Will start printing to console and will later be refactored to work with a GUI. 
+ Singleplayer game of Blackjack. Player will be able to Hit, Stand, Double, or Split. Tracks cash value until you lose all your money the game ends. Game Creates randomized decks each time you start it. Game adds used cards from previous hand to end of stack for continuous gameplay(Assuming you dont lose all you money first).
 
+Future plans
+================
+GUI
+Multiple decks/ game
+Saving progress
+Multiple Hands besides splitting
+Tutorial/ walk through
+SideBets ( so you can really throw your fake money away)
 
 Outline
 ---------
 
-Class - Controller
+Blackjack Class
+----------
+Main class for the bulk of the program. 
+
+Card Class 
+-------------
+Template for a card. Each card has a suit and a value.
+Includes toString Method and getValue method.
+
+Deck Class
 ------------------
-Listens to user input through mouse clicks.
+I use the deck class to make hands for the player and dealer.
+Stores a deck/ creates it in an array. createFullDeck() generates deck in order. 
+Shuffle() randomizes the deck.
+draw() adds card to a deck from a existing deck and removes it from the deck it took from.
+moveAlltoDeck() used for restoring the deck playing cards for continuous play
+cardsValue() returns the value of the cards in each deck/hand. 
+toString() format printing
 
-Class - Container
-------------------
-Main class which will run start up Class(View) to make the GUI.
+Value class
+----------
+enum class defining TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE
 
-Class - View
--------------------
-Will create and run the GUI.
-
-Class - Viewer
--------------------
-Will update class view
-
-Class - Hand
-----------------------
-Will provide a template for a players hand. Will contain methods to show hand, get hand size, add card, and will also check to see if the hand dealt was a Blackjack.
-
-Class - Player
-----------------------
-Will contain player name and give that player a (Hand). Will potentially be used to save games and add multiple players. 
-
-Class - Deck
-----------------------
-Will contain all 52 cards of a deck and will work with class(card) to create a standard deck of cards. 4 suits, Ace - King. Methods will include 
-cardsLeft()
-dealCard()
-getCard()
-removeCard()
-
-Class - Card 
-------------------------
-Will contain card value 2,3,4,5,6,7,8,9,10,10,10,10,1. And suit Club,Spade,Diamond,Heart. 
-
-Class - Bank
--------------------
-Will contain players current bank/money value. Will go negative. 
+Suit class
+---------------
+enum class defining SPADES, HEARTS, DIAMONDS, CLUBS
